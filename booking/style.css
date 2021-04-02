@@ -65,6 +65,15 @@ form .page .field input{
   padding-left: 15px;
   font-size: 18px;
 }
+
+input{
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding-left: 15px;
+  font-size: 18px;
+}
 form .page .field select{
   width: 100%;
   padding-left: 10px;

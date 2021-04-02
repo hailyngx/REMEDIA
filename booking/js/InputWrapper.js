@@ -1,6 +1,6 @@
 const $template = document.createElement('template');
 $template.innerHTML = `
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
     <div class="form-group">
         <input type="text" id="input" class="form-control" placeholder="This is input">
         <div id="error" class="text-danger"></div>

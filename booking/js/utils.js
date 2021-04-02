@@ -1,13 +1,3 @@
-export function validate(condition, message) {
-    if(condition(this.value)) { 
-        this.error = "";
-        return true;
-    } else {
-        this.error = message;
-        return false;
-    }
-}
-
 export function require(value) {
     return value != '';
 }
