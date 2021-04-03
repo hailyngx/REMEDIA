@@ -21,7 +21,7 @@ export function getDataFromDocs(docs) {
     });
 }
 
-export async function register(name, dob, gender, email, phone, scheduledDate, scheduledTime, description, first, second, third) {
+export async function register(name, dob, gender, email, phone, scheduledDate, scheduledTime1, scheduledTime2, description, first, second, third) {
     let response = await firebase
         .firestore()
         .collection("appointments")
@@ -38,7 +38,7 @@ export async function register(name, dob, gender, email, phone, scheduledDate, s
             email: email,
             phone: phone,
             scheduledDate: scheduledDate,
-            scheduledTime: scheduledTime,
+            scheduledTime: [scheduledTime1, scheduledTime2],
             description: description,
             prioritizedExperts: [first, second, third],
         });

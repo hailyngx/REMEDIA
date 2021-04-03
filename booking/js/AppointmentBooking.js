@@ -45,7 +45,7 @@ $template.innerHTML = /*html*/ `
             <div class="title">Basic Information</div>
             <div class="field">
                 <div class="label">Full Name</div>
-                <input-wrapper id="name" type="text"></input-wrapper>
+                <input id="name" type="text">
             </div>
             <div class="field">
                 <div class="label">Date of Birth</div>
@@ -85,16 +85,17 @@ $template.innerHTML = /*html*/ `
             <div class="title">Meeting Details</div>
             <div class="field">
                 <div class="label">Scheduled Date</div>
-                <input-wrapper id="scheduled-date" type="date"></input-wrapper>
+                <input id="scheduled-date" type="date">
             </div>
             <div class="field">
                 <div class="label">Scheduled Time (GMT +7)</div>
-                <input id="scheduled-time" type="time">
+                <input id="scheduled-time-1" type="time">
+                <input id="scheduled-time-2" type="time">
+
             </div>
             <div class="field">
                 <div class="label">Description of your case</div>
-                <input-wrapper id="description" type="text"></input-wrapper>
-
+                <input id="description" type="text">
             </div>
             <div class="field btns">
                 <button class="prev-2 prev">Previous</button>
@@ -159,7 +160,8 @@ export default class AppointmentBooking extends HTMLElement {
         this.$email = this.shadowRoot.getElementById('email');
         this.$phone = this.shadowRoot.getElementById('phone');
         this.$scheduledDate = this.shadowRoot.getElementById('scheduled-date');
-        this.$scheduledTime = this.shadowRoot.getElementById('scheduled-time');
+        this.$scheduledTime1 = this.shadowRoot.getElementById('scheduled-time-1');
+        this.$scheduledTime2 = this.shadowRoot.getElementById('scheduled-time-2');
         this.$description = this.shadowRoot.getElementById('description');
         this.$1st = this.shadowRoot.getElementById('1st');
         this.$2nd = this.shadowRoot.getElementById('2nd');
@@ -210,7 +212,7 @@ export default class AppointmentBooking extends HTMLElement {
             this.$progressText[this.current - 1].classList.add("active");
             this.current += 1;
             setTimeout(function () {
-                alert("Your Form Successfully Signed up");
+                alert("Your Form Successfully Submitted");
                 location.reload();
             }, 800);
         });
@@ -252,22 +254,23 @@ export default class AppointmentBooking extends HTMLElement {
             let email = this.$email.value
             let phone = this.$phone.value
             let scheduledDate = this.$scheduledDate.value
-            let scheduledTime = this.$scheduledTime.value
+            let scheduledTime1 = this.$scheduledTime1.value
+            let scheduledTime2 = this.$scheduledTime2.value
             let description = this.$description.value
             let first = this.$1st.value
             let second = this.$2nd.value
             let third = this.$3rd.value
     
 
-            let isPassed = this.$name.validate(require, "Input your name") &
-                (
-                    this.$email.validate(require, "Input your email") &&
-                    this.$email.validate(validateEmail, "Wrong email format")
-                );
+            // let isPassed = this.$name.validate(require, "Input your name") &
+            //     (
+            //         this.$email.validate(require, "Input your email") &&
+            //         this.$email.validate(validateEmail, "Wrong email format")
+            //     );
 
-            if (isPassed) {
-                register(name, dob, gender, email, phone, scheduledDate, scheduledTime, description, first, second, third)
-            }
+            // if (isPassed) {
+                register(name, dob, gender, email, phone, scheduledDate, scheduledTime1, scheduledTime2, description, first, second, third)
+            // }
         }
     }
 }
