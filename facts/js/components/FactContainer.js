@@ -28,12 +28,12 @@ a{
 
 <section class="facts">
     <div class="container">
-        <fact-info image="../assets/facts/cocacola.jpeg" factName="Coca-Cola" factContent ="Coca-Cola was invented by a pharmacist named John Pemberton. He carried the jug of
-        the new product down the street to Jacob's Pharmacy where it was sampled and pronounced 'excellent' and placed on sale for 5 cents a glass as a soda fountain drink." readMore =""></fact-info>
-        <fact-info image="../assets/facts/money.jpg" factName="Pharmaceuticals Market" factContent = "The global pharmaceuticals market is worth $300 billion." readMore =""></fact-info>
-        <fact-info image="../assets/facts/lipitor.jpg" factName="Best selling drug" factContent = 'Lipitor is the best-selling drug of all time. It was introduced in 1997 and its
-        patent expired in 2011, making about $125 billion.' readMore =""></fact-info>
-        <fact-info image="../assets/facts/glybera-200.jpg" factName="Most expensive drug" factContent = "The most expensive drug is Glybera at a wholesale cost of $1.21 million per year. It is a gene therapy that helps restore lipoprotein lipase enzyme activity in those with familial lipoprotein lipase deficiency. Only 1 million patients have this extremely rare condition." readMore =""></fact-info>
+        <fact-info image="../assets/facts/cocacola.jpeg" fact-name="Coca-Cola" fact-content ="Coca-Cola was invented by a pharmacist named John Pemberton. He carried the jug of
+        the new product down the street to Jacob's Pharmacy where it was sampled and pronounced 'excellent' and placed on sale for 5 cents a glass as a soda fountain drink." read-more =""></fact-info>
+        <fact-info image="../assets/facts/money.jpg" fact-name="Pharmaceuticals Market" fact-content = "The global pharmaceuticals market is worth $300 billion." read-more =""></fact-info>
+        <fact-info image="../assets/facts/lipitor.jpg" fact-name="Best selling drug" fact-content = 'Lipitor is the best-selling drug of all time. It was introduced in 1997 and its
+        patent expired in 2011, making about $125 billion.' read-more =""></fact-info>
+        <fact-info image="../assets/facts/glybera-200.jpg" fact-name="Most expensive drug" fact-content = "The most expensive drug is Glybera at a wholesale cost of $1.21 million per year. It is a gene therapy that helps restore lipoprotein lipase enzyme activity in those with familial lipoprotein lipase deficiency. Only 1 million patients have this extremely rare condition." read-more =""></fact-info>
     </div>
 </section>
 `;

@@ -24,7 +24,7 @@ export default class VideoInfo extends HTMLElement {
         this.shadowRoot.appendChild($template.content.cloneNode(true))
 
         this.$videoName = this.shadowRoot.getElementById('video-name');
-        this.$videoName = this.shadowRoot.getElementById('video-content');
+        this.$videoContent = this.shadowRoot.getElementById('video-content');
         this.$readMore = this.shadowRoot.getElementById('read-more');
         this.$iframe = this.shadowRoot.getElementById('iframe');
     }
@@ -40,11 +40,11 @@ export default class VideoInfo extends HTMLElement {
                 break;
 
             case 'video-name':
-                this.$factName.innerHTML = newValue
+                this.$videoName.innerHTML = newValue
                 break;
         
             case 'video-content':
-                this.$factContent.innerHTML = newValue
+                this.$videoContent.innerHTML = newValue
                 break;
 
             case 'read-more':
