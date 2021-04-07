@@ -1,2 +1,3 @@
-import InfoCard from '../js/components/InfoCard.js'
-import DrugInfo from '../js/components/DrugInfo.js'
+import InfoCard from './components/InfoCard.js'
+import DrugInfo from './components/DrugContainer.js'
+import SearchBar from '../js/components/SearchBar.js'

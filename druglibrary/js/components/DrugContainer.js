@@ -1,7 +1,32 @@
+import InfoCard from "./InfoCard.js";
+import SearchBar from "./SearchBar.js"
+
 const $template = document.createElement('template');
 $template.innerHTML = /*html*/ `
 <link rel="stylesheet" href="./css/InfoCard.css">
 <link rel="stylesheet" href="./css/DrugLibrary.css">
+<link rel="stylesheet" href="./css/SearchBar.css">
+<script >
+	$(document).ready(function(){
+		$("#searchBar").on("keyup",function(){
+		var value = $(this).val().toLowerCase();
+		$("#info-card element").filter(function(){
+			$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+		});
+	});
+		});
+</script>
+<div class="container">
+<h1>&#x2728; Drug Shelves &#x2728;</h1>
+<div id="searchWrapper">
+    <input
+        type="text"
+        name="searchBar"
+        id="searchBar"
+        placeholder="Search for a cure 🌈"
+    />
+</div>
+</div>
 <section class="drug-book">
 <section class="allergy">
     <h1 style="padding-top:150px" class="drugbook_heading">Allergy</h1>
@@ -35,13 +60,34 @@ $template.innerHTML = /*html*/ `
 </section>
 `
 
-export default class DrugInfo extends HTMLElement {
+export default class DrugContainer extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({mode:'open'});
         this.shadowRoot.appendChild($template.content.cloneNode(true))
+    }
 
+    connectedCallback() {
+        let keyWord = "Coricidin"
+        let $infoCards = this.shadowRoot.querySelectorAll("info-card")
+        console.log($infoCards)
+
+        for (let $infoCard of $infoCards){
+            let name = $infoCard.getAttribute('name');
+            let found = name.toLowerCase().indexOf(keyWord.toLowerCase()) > -1
+            if (found) {
+                console.log($infoCard)
+                return `
+            `;
+            } 
+        }
+
+        // let found = $infoCards.filter(function($infoCard) {
+        //     let name = $infoCard.getAttribute('name');
+        //     return name.toLowerCase().indexOf(keyWord.toLowerCase) > -1
+        // })
+        // console.log(found)
     }
 }
 
-window.customElements.define('drug-info', DrugInfo)
+window.customElements.define('drug-container', DrugContainer)

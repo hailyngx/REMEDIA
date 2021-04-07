@@ -49,14 +49,8 @@ export default class InfoCard extends HTMLElement {
             case 'review-rates':
                 this.$reviewRates.innerHTML = newValue
                 break;
-
         }
-
     }   
 }
-
-    
-
-
 
 window.customElements.define('info-card', InfoCard)
