@@ -3,7 +3,7 @@ $template.innerHTML = /*html*/ `
     <link rel="stylesheet" href="./css/fact-info.css">
     <div class="card" style="background-image: linear-gradient(to top, #dfe9f3 0%, white 100%)">
         <div class="imgBx" data-text="Video Title">
-        <iframe src="https://www.youtube.com/embed/m0V6DRJBBGY" frameborder="0"
+        <iframe id="iframe" src="https://www.youtube.com/embed/m0V6DRJBBGY" frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
 
