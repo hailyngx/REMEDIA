@@ -28,12 +28,17 @@ a{
 
 <section class="facts">
     <div class="container">
-        <video-info iframe ="https://www.youtube.com/embed/m0V6DRJBBGY" factName="Coca-Cola" factContent ="Coca-Cola was invented by a pharmacist named John Pemberton. He carried the jug of
-        the new product down the street to Jacob's Pharmacy where it was sampled and pronounced 'excellent' and placed on sale for 5 cents a glass as a soda fountain drink." readMore =""></video-info>
-        <video-info iframe ="../assets/facts/money.jpg" factName="Pharmaceuticals Market" factContent = "The global pharmaceuticals market is worth $300 billion." readMore =""></video-info>
-        <video-info iframe ="../assets/facts/lipitor.jpg" factName="Best selling drug" factContent = 'Lipitor is the best-selling drug of all time. It was introduced in 1997 and its
-        patent expired in 2011, making about $125 billion.' readMore =""></video-info>
-        <video-info iframe ="../assets/facts/glybera-200.jpg" factName="Most expensive drug" factContent = "The most expensive drug is Glybera at a wholesale cost of $1.21 million per year. It is a gene therapy that helps restore lipoprotein lipase enzyme activity in those with familial lipoprotein lipase deficiency. Only 1 million patients have this extremely rare condition." readMore =""></video-info>
+        <video-info iframe ="https://www.youtube.com/embed/m0V6DRJBBGY" factName="Penicillin and Antibiotic Resistance" factContent ="Watch this video to learn how penicillin and penicillin-related antibiotics disrupt the
+        bacterial life cycle, and what molecular mechanisms bacteria employ to evade the action
+        of these drugs." readMore ="https://www.youtube.com/watch?v=m0V6DRJBBGY"></video-info>
+        <video-info iframe ="https://www.youtube.com/embed/zBkVCpbNnkU" factName="Side Effects of the Vaccine - How high is the risk?" factContent = "Vaccines are one of the most effective tools for preventing
+        dangerous diseases, but they also have side effects. Will refusing to be vaccinated make you safer?" readMore ="https://youtu.be/zBkVCpbNnkU"></video-info>
+        <video-info iframe ="https://www.youtube.com/embed/-RkhAP0_ms4" factName="The pharmacy of the future? Personalized pills, 3D printed at home" factContent = 'In a talk and concept demo, Kraft shares his vision for a future of
+        personalized medication,
+        unveiling a prototype 3D printer that could design pills that adapt to our individual
+        needs.' readMore ="https://youtu.be/-RkhAP0_ms4"></video-info>
+        <video-info iframe ="https://www.youtube.com/embed/xZbcwi7SfZE" factName="The Antibiotic Apocalypse Explained" factContent = "What is the Antibiotic Apocalypse? What is it all about? And how
+        dangerous is it?" readMore ="https://www.youtube.com/watch?v=xZbcwi7SfZE"></video-info>
     </div>
 </section>
 `;
