@@ -1,6 +1,5 @@
 const $template = document.createElement('template');
 $template.innerHTML = /*html*/ `
-
     <link rel="stylesheet" href="./css/InfoCard.css">
     <div class="card">
     <div class="imgBx">
@@ -11,7 +10,7 @@ $template.innerHTML = /*html*/ `
         <p id="description">Loratadine is used to treat sneezing, runny nose, watery eyes, hives, skin rash,
             itching, and other cold or allergy symptoms.
         </p>
-        <h2 id="review-rates">Review Rates: </h2>
+        <h2 id="review-rates">Review Rates: 4.0 ⭐️</h2>
     </div>
 </div>
 `
