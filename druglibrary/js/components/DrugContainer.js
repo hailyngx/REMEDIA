@@ -5,6 +5,8 @@ $template.innerHTML = /*html*/ `
 <link rel="stylesheet" href="./css/InfoCard.css">
 <link rel="stylesheet" href="./css/DrugLibrary.css">
 <link rel="stylesheet" href="./css/SearchBar.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
 <div class="container">
 <h1>&#x2728; Drug Shelves &#x2728;</h1>
 <div id="searchWrapper">
@@ -16,9 +18,23 @@ $template.innerHTML = /*html*/ `
     />
 </div>
 </div>
+
+<div class="row">
+				<div class="col-md-12 text-center">
+					<ul id="filter-list">
+						<li class="filter active" data-filter="all">ALL</li>
+						<li class="filter" data-filter="1">ALLERGY</li>
+						<li class="filter" data-filter="2">COLD AND FLU</li>
+						<li class="filter" data-filter="3">ACNE</li>
+						<li class="filter" data-filter="4">COMING SOON</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
 <section class="drug-book">
 <section class="allergy">
-    <h1 style="padding-top:150px" class="drugbook_heading">Allergy</h1>
+    <h1 class="drugbook_heading">Allergy</h1>
 </section>
     <div class="drugbook_container">
 <info-card image="../assets/druglibrary/loratadine.jpg" name="Loratadine" description="Loratadine is used to treat sneezing, runny nose, watery eyes, hives, skin rash, itching, and other cold or allergy symptoms." reviewRates =" Review Rates: "></info-card>
@@ -58,7 +74,8 @@ export default class DrugContainer extends HTMLElement {
     connectedCallback() {
         this.$searchBar.onchange = (event) => {
             this.searchDrugs(event.target.value);
-        }        
+        }
+
     }
 
     searchDrugs(keyword) {
@@ -75,6 +92,22 @@ export default class DrugContainer extends HTMLElement {
             }
         }
     }
+
+    filterDrugs(keyword) {
+        let $infoCards = this.shadowRoot.querySelectorAll("info-card")
+        console.log($infoCards)
+
+        for (let $infoCard of $infoCards){
+            let name = $infoCard.getAttribute('name');
+            let found = name.toLowerCase().indexOf(keyword.toLowerCase()) > -1
+            if (found) {
+                $infoCard.style.display = "block";
+            } else {
+                $infoCard.style.display = "none";
+            }
+        }
+    }
+
 }
 
 window.customElements.define('drug-container', DrugContainer)
