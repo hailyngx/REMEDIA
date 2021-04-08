@@ -1,4 +1,5 @@
 import {signup} from "../../models/users.js"
+import {require,validateEmail} from '../../utils.js'
 
 const $template = document.createElement('template');
 $template.innerHTML = /*html*/ `
@@ -44,18 +45,9 @@ export default class SignupForm extends HTMLElement {
             let email = this.$email.value;
             let password = this.$password.value;
 
-            function require(value){
-                return value != '';
-            }
- 
             function confirmPassword(value){
                 return value == password;
             }    
-
-            function validateEmail(email) {
-                const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-                return re.test(String(email).toLowerCase());
-            }
 
             let isPassed = this.$name.validate(require,'Input your name') &
                 (
@@ -71,7 +63,6 @@ export default class SignupForm extends HTMLElement {
             
             if(isPassed){
                 signup(name, email, password)
-                console.log('Register successfully')
             }
         }
     }

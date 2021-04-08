@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins&display=swap');
+
+html,body{
+    padding: 0;
+    border: 0;
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+
+a{
+    text-decoration: none;
+   
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style-type: none;
+}
+
+h1{
+    font-family:'Montserrat', sans-serif; 
+    font-size: 2.5rem;
+}
+
+h2{
+    font-family:'Montserrat', sans-serif ;
+    font-weight: 600;
+}
+
+h3{
+    font-family:'Montserrat', sans-serif ;
+    font-size: 1.8rem;
+}
+
+button.btn{
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    outline: none;
+    color: white
+}
+
+span{
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    margin: 0 5vw;
+}
+
+p{
+    font-family: 'Poppins', sans-serif;
+    /* color:white; */
+}
+
+span{
+
+}
+/* section{
+    padding: 10rem 0;
+    background-color: #fff
+} */
+
+.heading{
+    /* text-transform: uppercase; */
+    font-size: 2.5rem;
+    /* letter-spacing: 1px; */
+    margin-right: -3px;
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+    padding-top: 4rem;
+    font-family:'Montserrat', sans-serif; 
+
+}
+
+.heading::after{
+    content: "";
+    width: 10rem;
+    height: .4rem;
+    background-image: linear-gradient(to right, #3ab5b0 0%, #3d99be 31%, #56317a 100%); 
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2rem;
+}
+
+/* InfoCard CSS starts from here */
+
+.card{
+    position: relative;
+    max-width: 300px;
+    height: 215px;
+    background: #aeefff;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    /* box-shadow: 0 10px 100px rgba(0,0,0,0.5); */
+    transition: 0.3s ease-in-out;
+}
+
+.card:hover{
+    height: 500px;
+}
+
+.card .imgBx{
+    position: relative;
+    width: 260px;
+    height: 260px;
+}
+
+.card .imgBx img{
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.card .content{
+    position: relative;
+    margin-top: -140px;
+    padding: 30px 15px;
+    text-align: center;
+    color: #111;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.card:hover .content{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.3s;
+}
+
